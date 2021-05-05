@@ -13,6 +13,34 @@ export function createElement(elementName, elementContent, ...attributePairs) {
   return element;
 }
 
+export function createImage(src, alt) {
+  const image = document.createElement("img");
+  image.src = src;
+  image.alt = alt;
+  image.classList.add("menu-item");
+  return image;
+}
+
+export function createMealBlock(itemName, itemDescription, imageSrc, imageAlt) {
+  const li = createElement("li");
+  const image = createImage(imageSrc, imageAlt);
+
+  const descriptionDiv = createElement("div", 0, [
+    "class",
+    "menu-item-description",
+  ]);
+  const title = createElement("h4", itemName);
+  const description = createElement("p", itemDescription);
+
+  descriptionDiv.appendChild(title);
+  descriptionDiv.appendChild(description);
+
+  li.appendChild(image);
+  li.appendChild(descriptionDiv);
+
+  return li;
+}
+
 export function createHeader() {
   const header = createElement("header");
   const title = createElement("h1", "The Odin Restaurant", ["id", "title"]);
