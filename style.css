@@ -5,12 +5,7 @@
 
 :root {
   color: white;
-  --bg-color: rgba(0, 0, 0, 0.6);
   font-size: 1.2em;
-}
-
-body {
-  background-color: var(--bg-color);
 }
 
 div#content {
@@ -59,7 +54,6 @@ h1#title {
 
 header {
   width: 100%;
-  background-color: var(--bg-color);
 }
 
 nav {
@@ -67,20 +61,21 @@ nav {
 }
 
 main {
-  background-color: var(--bg-color);
   display: flex;
   align-items: center;
   flex-flow: column;
 }
 
 body {
-  background-image: url("../assets/food-stock.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../assets/food-stock.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-section {
+section#about {
   box-sizing: border-box;
   padding: 2em;
   line-height: 1.5em;
@@ -88,14 +83,39 @@ section {
   max-width: 60%;
 }
 
-section > * {
+section#about > * {
   padding-bottom: 1em;
 }
 
+section#menu ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+section#menu ul > li {
+  display: flex;
+  padding: 1em;
+  flex-direction: row;
+  text-align: start;
+}
+
+.menu-item-description > * {
+  padding-left: 0.5em;
+  padding-bottom: 1em;
+}
+
+img.menu-item {
+  border: 1px solid white;
+  max-width: 60%;
+}
+
 footer {
-  border-top: 1px solid white;
-  padding: 1em 0;
-  background-color: var(--bg-color);
+  padding: 1em;
+  font-size: 0.75em;
+  text-align: center;
 }
 
 @media screen and (orientation: portrait) {
