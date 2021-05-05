@@ -66,3 +66,18 @@ export function createFooter() {
     'Crafted by <a href="https://github.com/marvka">marvka</a> for <a href="https://www.theodinproject.com/">The Odin Project</a>';
   return footer;
 }
+
+export function createForm() {
+  const form = createElement("form", null, ["id", "contact-form"]);
+  form.appendChild(createElement("label", "Name:", ["for", "name"]));
+  form.appendChild(createElement("input", 0, ["type", "text"],["id","name"],["name","name"]));
+
+  form.appendChild(createElement("label", "Email:", ["for", "email"]));
+  form.appendChild(createElement("input", 0, ["type", "text"],["id","email"],["name","email"]));
+
+  form.appendChild(createElement("label", "Message:", ["for", "message"]));
+  form.appendChild(createElement("textarea", 0, ["id","message"],["name","message"]));
+
+  form.appendChild(createElement('input',0,['type','submit'],['value','Send message']))
+  return form;
+}
