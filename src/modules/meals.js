@@ -39,13 +39,13 @@ meals.push(
   ),
   new Meal(
     "Pizza",
-    "Who doesn't love a good Pizza?",
+    "Who doesn't love a good pizza?",
     "assets/pizza.jpg",
     "An image of a pizza"
   ),
   new Meal(
     "Stir Fry",
-    "A delicious stir fry made from fresh local produce, served with steaming rice",
+    "A delicious stir fry made from fresh local produce, served with steaming rice.",
     "assets/stir-fry.jpg",
     "An image of a stir fry"
   )
