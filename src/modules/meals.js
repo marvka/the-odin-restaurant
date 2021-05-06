@@ -28,25 +28,25 @@ meals.push(
   new Meal(
     "Burger",
     "Made with housemade buns and fresh vegetables.",
-    "../assets/burger.jpg",
+    "assets/burger.jpg",
     "An image of a burger"
   ),
   new Meal(
     "Fish and Chips",
     "Nicely fried chips, nicely fried fish. Can't go wrong with it.",
-    "../assets/fish-and-chips.jpg",
+    "assets/fish-and-chips.jpg",
     "An image of fish and chips"
   ),
   new Meal(
     "Pizza",
     "Who doesn't love a good Pizza?",
-    "../assets/pizza.jpg",
+    "assets/pizza.jpg",
     "An image of a pizza"
   ),
   new Meal(
     "Stir Fry",
     "A delicious stir fry made from fresh local produce, served with steaming rice",
-    "../assets/stir-fry.jpg",
+    "assets/stir-fry.jpg",
     "An image of a stir fry"
   )
 );
