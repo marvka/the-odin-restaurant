@@ -2,7 +2,6 @@ import { createElement, createHeader, createFooter } from "./dom-manip";
 
 export function loadHome() {
   const content = document.querySelector("div#content");
-  content.innerHTML = "";
   const main = createElement("main");
   const section = createElement("section", null, ["id", "about"]);
   let p = createElement(
@@ -22,6 +21,7 @@ export function loadHome() {
   main.appendChild(section);
 
   content.appendChild(createHeader());
+  document.getElementById("home").classList.add("active-tab");
   content.appendChild(main);
   content.appendChild(createFooter());
 }

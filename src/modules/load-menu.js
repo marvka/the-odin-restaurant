@@ -2,14 +2,12 @@ import {
   createElement,
   createHeader,
   createFooter,
-  createImage,
   createMealBlock,
 } from "./dom-manip";
 import { meals } from "./meals";
 
 export function loadMenu() {
   const content = document.querySelector("div#content");
-  content.innerHTML = "";
   const main = createElement("main");
   const section = createElement("section", null, ["id", "menu"]);
   const list = createElement("ul");

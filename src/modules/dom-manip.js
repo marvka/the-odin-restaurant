@@ -45,9 +45,14 @@ export function createHeader() {
   const header = createElement("header");
   const title = createElement("h1", "The Odin Restaurant", ["id", "title"]);
   const nav = createElement("nav");
-  const aHome = createElement("a", "Home", ["class", "active-tab"]);
-  const aMenu = createElement("a", "Menu");
-  const aContact = createElement("a", "Contact");
+  const aHome = createElement("a", "Home", ["id", "home"], ["class", "tab"]);
+  const aMenu = createElement("a", "Menu", ["id", "menu"], ["class", "tab"]);
+  const aContact = createElement(
+    "a",
+    "Contact",
+    ["id", "contact"],
+    ["class", "tab"]
+  );
 
   const footer = createElement("footer");
   footer.innerHTML =
@@ -70,14 +75,34 @@ export function createFooter() {
 export function createForm() {
   const form = createElement("form", null, ["id", "contact-form"]);
   form.appendChild(createElement("label", "Name:", ["for", "name"]));
-  form.appendChild(createElement("input", 0, ["type", "text"],["id","name"],["name","name"]));
+  form.appendChild(
+    createElement(
+      "input",
+      0,
+      ["type", "text"],
+      ["id", "name"],
+      ["name", "name"]
+    )
+  );
 
   form.appendChild(createElement("label", "Email:", ["for", "email"]));
-  form.appendChild(createElement("input", 0, ["type", "text"],["id","email"],["name","email"]));
+  form.appendChild(
+    createElement(
+      "input",
+      0,
+      ["type", "text"],
+      ["id", "email"],
+      ["name", "email"]
+    )
+  );
 
   form.appendChild(createElement("label", "Message:", ["for", "message"]));
-  form.appendChild(createElement("textarea", 0, ["id","message"],["name","message"]));
+  form.appendChild(
+    createElement("textarea", 0, ["id", "message"], ["name", "message"])
+  );
 
-  form.appendChild(createElement('input',0,['type','submit'],['value','Send message']))
+  form.appendChild(
+    createElement("input", 0, ["type", "submit"], ["value", "Send message"])
+  );
   return form;
 }
