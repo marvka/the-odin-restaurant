@@ -50,6 +50,7 @@ nav a.active-tab {
 h1#title {
   font-size: 3rem;
   padding-top: 0.5rem;
+  text-decoration: underline;
 }
 
 header {
